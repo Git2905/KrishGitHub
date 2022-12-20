@@ -5,7 +5,11 @@ const Persons = require('../models/Persons');
 module.exports =
 {
   getAllPersons: function (request) {
-
+    return Persons.findAll(
+      {
+        raw:true
+      }
+    );
   },
   getPersonByID: function (request) {
 
